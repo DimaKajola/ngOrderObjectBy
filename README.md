@@ -2,11 +2,13 @@
 
 ## Synopsis
 
-This filter was [created by **Justin Klemm**](http://justinklemm.com/angularjs-filter-ordering-objects-ngrepeat/) because the default Angular orderBy filter fails to sort properly Objects of Objects in the context of ngRepeat.
+This original filter was [created by **Justin Klemm**](http://justinklemm.com/angularjs-filter-ordering-objects-ngrepeat/) because the default Angular orderBy filter fails to sort properly Objects of Objects in the context of ngRepeat.
+
+This fork is used to sort the list of objects by secondary property name.
 
 ## Use
 
-Install as Bower dependency: ```bower install angular-order-object-by```.
+Install as Bower dependency: ```bower install https://github.com/DimaKajola/ngOrderObjectBy```.
 
 Include on your Angular module's dependencies:
 
@@ -18,17 +20,10 @@ Then, in your application views:
 
 ```html
 <ul>
-    <li ng-repeat="object in objects | orderObjectBy: 'criteria' : direction">...</li>
+    <li ng-repeat="object in objects | orderObjectBy: 'criteria' : direction : {field:'user_registered', reverse: true}">...</li>
 </ul>
 ```
 
-Thanks to @diegou work now sorting by children's sudocument's properties is supported:
-
-```html
-<ul>
-    <li ng-repeat="object in objects | orderObjectBy: 'property.criteria' : direction">...</li>
-</ul>
-```
 
 For an example see [test/index.html](https://github.com/fmquaglia/ngOrderObjectBy/blob/master/test/index.html).
 
