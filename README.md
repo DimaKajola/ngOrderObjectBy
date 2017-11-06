@@ -8,7 +8,7 @@ This fork is used to sort the list of objects by secondary property name.
 
 ## Use
 
-Install as Bower dependency: ```bower install https://github.com/DimaKajola/ngOrderObjectBy```.
+Install as Bower dependency: ```bower install https://github.com/DimaKajola/ngOrderObjectBy.git```.
 
 Include on your Angular module's dependencies:
 
